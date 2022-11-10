@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 15%;
+}
+
+/* Header  */
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #44140adc;
+    color: white;
+}
+
+.header-date {
+    padding-top: 10%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+
+.header-budget {
+    font-size: 2em;
+    text-align: center;
+}
+
+.header-error {
+    padding: 5% 10px;
+    margin: 5% 0;
+    background-color: rgb(224, 30, 30);
+    border: 1px solid black;
+}
+
+.header-incomes {
+    display: flex;
+    justify-content: space-between;
+    padding: 5%;
+    margin: 5% 0;
+    border: 1px solid black;
+    background-color: #2b507f;
+}
+
+.header-expenses {
+    display: flex;
+    padding: 5%;
+    border: 1px solid black;
+    justify-content: space-between;
+    margin: 5% 0;
+    background-color: rgba(240, 136, 88, 0.733);
+}
+
+.header-procent-incomes {
+    opacity: 0;
+    margin-left: 5px;
+    background-color: rgb(224, 59, 59);
+    padding: 2px;
+    color: white;
+}
+
+.header-procent {
+    margin-left: 5px;
+    background-color: rgb(224, 59, 59);
+    padding: 2px;
+    color: white;
+}
+
+/* Transaction form */
+
+
+.form {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(170, 211, 250, 0.5);
+    padding: 20px;
+}
+
+.form-select {
+    display: flex;
+    height: 50px;
+    width: 50px;
+
+}
+
+.form-description {
+    display: flex;
+    height: 50px;
+    margin-left: 15px;
+}
+
+.form-value {
+    display: flex;
+    margin-left: 15px;
+    height: 50px;
+}
+
+.form-btn {
+    display: flex;
+    height: 50px;
+    width: 10px;
+    margin-left: 15px;
+}
+
+.form-btn-income {
+    background-color: #2b507f;
+    color: white;
+}
+
+.form-btn-expense {
+    background-color: rgba(248, 46, 46, 0.842);
+}
+
+/* Tables */
+
+
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px 50px;
+}
+
+/* Clearfix (clear floats) */
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.table-header {
+    font-size: xx-large;
+    font-weight: 700;
+}
+
+.table-header-incomes {
+    font-size: xx-large;
+    font-weight: 700;
+    color: rgb(111, 181, 247);
+}
+
+.table-header-expenses {
+    font-size: xx-large;
+    font-weight: 700;
+    color: rgba(240, 136, 88, 1);
+}
+
+th,
+td {
+    padding: 6px;
+}
+
+.row-transaction {
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+}
+
+.row-income-value {
+    font-weight: 800;
+    color: rgb(0, 37, 248);
+}
+
+tr:nth-child(even) {
+    background-color: rgb(170, 211, 250, 0.5);
+}
+
+.row-expenses-value {
+    margin-left: 5px;
+    color: rgb(224, 59, 59);
+    padding: 2px;
+    font-weight: 800;
+}
+
+.list-procent-span {
+    margin-left: 5px;
+    background-color: rgba(240, 136, 88, 0.733);
+    color: rgba(153, 63, 63, 0.979);
+    padding: 2px;
+    text-align: right;
+    font-weight: 600;
+}
+
+.button {
+    opacity: 0;
+}
+
+tr:hover .button {
+    opacity: 1;
+}
