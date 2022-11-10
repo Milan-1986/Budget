@@ -5,7 +5,6 @@ import { GlobalProvider } from './Context/GlobalState';
 import TransactionForm from './Component/TransactionForm';
 
 
-
 function App() {
   return (
     <div className="container">
