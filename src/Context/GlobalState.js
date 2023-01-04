@@ -32,22 +32,41 @@ const Reducer = ((state, action) => {
 
 // function for load data from local storege that eliminate error if local storage is empty.
 
+
 function getIncoms() {
-    let localStorageIncomes = JSON.parse(localStorage.getItem('listOfIncome'));
-    if (localStorageIncomes === null) {
-        return [];
+    let localStorageIncomes;
+    try {
+        localStorageIncomes = JSON.parse(localStorage.getItem('listOfIncome'));
+        if (localStorageIncomes === null) {
+            return [];
+        }
+        return localStorageIncomes;
+    } catch (error) {
+        alert(error);
     }
-    return localStorageIncomes;
+
 }
 function getExpenses() {
-    let localStorageExpenses = JSON.parse(localStorage.getItem('listOfExpenses'));
-    if (localStorageExpenses === null) {
-        return [];
+    let localStorageExpenses;
+    try {
+        localStorageExpenses = JSON.parse(localStorage.getItem('listOfExpenses'));
+        if (localStorageExpenses === null) {
+            return [];
+        }
+        return localStorageExpenses;
+    } catch (error) {
+        alert(error);
     }
-    return localStorageExpenses;
 }
 
-    // create initial state
+// try {
+//     getIncoms();
+//     getExpenses();
+// } catch (error) {
+//     alert("Call technical support")
+// }
+
+// create initial state
 
 const initialState = {
     transactions: {

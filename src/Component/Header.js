@@ -14,20 +14,20 @@ export default function Header() {
     const incomes = transactions.incomes;
     const expenses = transactions.expenses;
 
-    const incomesValue = incomes.map((income) => (
+    const incomesValue = incomes?.map((income) => (
         income.value
     ));
-    const expensesValue = expenses.map((expens) => (
+    const expensesValue = expenses?.map((expens) => (
         expens.value
     ));
 
     let groseIncomes = 0;
-    for (let i = 0; i < incomesValue.length; i++) {
+    for (let i = 0; i < incomesValue?.length; i++) {
         groseIncomes += incomesValue[i];
     };
 
     let groseExpenses = 0;
-    for (let i = 0; i < expensesValue.length; i++) {
+    for (let i = 0; i < expensesValue?.length; i++) {
         groseExpenses += expensesValue[i];
     };
 
@@ -43,9 +43,9 @@ export default function Header() {
     let error = null;
     try {
         rezultat()
-    } catch (error) {
-        console.log(error);
-    } finally {
+    } catch (e) {
+        alert(e.message)       
+    }finally {
         budget = groseIncomes - groseExpenses;
         error = 'Expenses are greater than incomes. Please be cautious.'
     }

@@ -9,8 +9,8 @@ export default function TransactionForm() {
     const [name, setName] = useState('');
     const [value, setValue] = useState('');
 
-    function handleSubmit() {
-        // event.preventDefault();
+    function handleSubmit(event) {
+        event.preventDefault();
         const transaction = {
             id: uuid(),
             name: name,
