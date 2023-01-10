@@ -44,7 +44,7 @@ export default function Header() {
     try {
         rezultat()
     } catch (e) {
-        alert(e.message)       
+        console.log(e.message)       
     }finally {
         budget = groseIncomes - groseExpenses;
         error = 'Expenses are greater than incomes. Please be cautious.'
